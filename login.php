@@ -16,7 +16,13 @@
             <h3 class="text-center">Login</h3>
           </div>
           <div class="card-body">
-            <form>
+            <form action="login-logic.php" method="post">
+              <?php if(isset($_GET['error'])) {?>
+                <div class="alert alert-danger">
+                  <b>Oops </b><?= $_GET['error'] ?>
+                </div>
+              <?php } ?>
+
               <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" class="form-control">
@@ -25,8 +31,8 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" class="form-control">
               </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block">Login</button>
+              <div class="form-group float-right mt-3">
+                <button type="submit" class="btn btn-dark btn-block">Login</button>
               </div>
             </form>
           </div>
