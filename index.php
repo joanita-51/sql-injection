@@ -1,3 +1,35 @@
+<?php
+$names = [
+    'John Doe',
+    'Jane Doe',
+    'Julian Doe',
+    'Joy Doe',
+    'Julius Doe',
+    'Joan Doe', 
+];
+/*
+if(!isset($_GET['id'])){
+    die("id not set.");
+}
+
+// if(!(is_integer($_GET['id']))){
+//     die("Only integers are required.");
+// }
+ 
+$id = ((int)($_GET['id']));
+// die($id." ");
+
+if(!(isset($names[$id]))){
+    die("id not found");
+};*/
+
+echo "<pre>";
+echo "Your ID is ". htmlentities($_GET['id']); //.":" .$names[$_GET['id']];
+// print_r($_GET);
+
+die("  ");
+?>
+<!-- http://localhost/my-bank?id=<script>alert("Simple Hack")</script> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
